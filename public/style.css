@@ -52,7 +52,7 @@ body {
 }
 
 .topbar-social i {
-    margin-right: 10px;
+    margin-right: 20px;
     color: white;
 }
 
@@ -104,8 +104,16 @@ body {
 
 .slider {
     background-color: #f4f4f6;
+    /* background-color: #f4f4f6; */
     height: 500px;
     margin-bottom: 0px;
+}
+
+.slider-info {
+    margin: 50px auto;
+    color: #2f415d;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 
@@ -139,25 +147,6 @@ body {
 
 
 
-.custom {
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-input {
-    border-radius: 0px;
-}
-
-button {
-    border-radius: 5px;
-    padding: 3px 10px;
-    background: #1663e9;
-    color: white;
-    border: none;
-    margin-left: 20px;
-}
-
-
 .showcase {
     background-color: #1663e9;
     height: 400px;
@@ -175,7 +164,7 @@ button {
     right: 0px;
     top: -10px;
     color: white;
-    background-color: #1663e9;
+    background-color: #2f415d;
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -191,14 +180,98 @@ button {
 
 
 .latest-product {
-    background-color: rgb(218, 244, 255);
+    background-color:#f4f4f6;
     padding: 20px;
     position: relative;
+    padding-bottom: 40px;
 }
 
 
+.product-item {
+    border: none;
+    border-radius: 5px;
+}
+
+
+
 .product-image {
-    height: 280px;
+    height: 200px;
     width: 100%;
     object-fit: cover;
+}
+
+.newsletter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2f415d;
+    padding: 20px 40px;
+    color: white;
+
+}
+
+
+.newsletter-text {
+    flex: 6;
+    margin-top: 20px;
+}
+
+
+.newsletter-input {
+    flex: 6;
+    margin-top: 20px;
+}
+
+.newsletter-input input {
+    width: 70%;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.newsletter-input input:focus {
+    outline: none;
+    border: none;
+}
+
+.newsletter-input button {
+    padding: 10px;
+    background-color: #f1667d;
+    border: 1px solid #f1667d;
+    margin-left: 0;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+.newsletter-input button:hover {
+    cursor: pointer;
+
+}
+
+
+.footer {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    background-color: #2f415d;
+    padding: 20px 40px;
+    color: white;
+    padding-top: 30px;
+    border-top: 0.1px solid gray;
+    border-bottom: 0.3px solid gray;
+}
+
+
+.footer-logo {
+    flex: 3;
+}
+
+.footer-info {
+    flex: 5;
+}
+
+
+.footer-contact {
+    flex: 4;
 }
