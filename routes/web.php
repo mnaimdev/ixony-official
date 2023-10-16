@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,8 +17,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('master');
-});
+    return view('index');
+})->name('index');
+
+
+Route::get('/product/details', [FrontendController::class, 'productDetails'])->name('product.details');
+Route::get('/product/search', [FrontendController::class, 'search'])->name('product.search');
 
 
 

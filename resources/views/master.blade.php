@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Ixony Engineering Limited</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{asset('/frontend_assets/style.css')}}">
 </head>
 <body>
 
@@ -44,19 +44,19 @@
         <div class="header-menu">
             <ul>
                 <li>
-                    <a href="">Home</a>
+                    <a href="#home">Home</a>
                 </li>
                 <li>
-                    <a href="">About</a>
+                    <a href="#about">About</a>
                 </li>
                 <li>
-                    <a href="">Contact</a>
+                    <a href="#contac">Contact</a>
                 </li>
                 <li>
-                    <a href="">Category</a>
+                    <a href="#category">Category</a>
                 </li>
                 <li>
-                    <a href="">Address</a>
+                    <a href="#address">Address</a>
                 </li>
 
             </ul>
@@ -65,147 +65,13 @@
         <div class="mx-5 header-social">
             <i class="fa-solid fa-magnifying-glass"></i>
             <i class="fa-solid fa-user"></i>
-            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-cart-shopping" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
         </div>
    </div>
 
 
-   {{-- slider --}}
+   @yield('content')
 
-        <div class="slider">
-            <div class="d-flex justify-content-center">
-                <div class="slider-info">
-                    <p>Mask</p>
-                    <p>Industrial PPE</p>
-                </div>
-                <div>
-                    <img src="{{asset('/slider1.png')}}" style="width: 100%; height: 300px;" alt="">
-                </div>
-            </div>
-
-
-            <div class="d-flex justify-content-center">
-                <div class="slider-info">
-                    <p>Mask</p>
-                    <p>Industrial PPE</p>
-                </div>
-                <div>
-                    <img src="{{asset('/slider2.png')}}" style="width: 100%; height: 300px;" alt="">
-                </div>
-            </div>
-
-
-            <div class="d-flex justify-content-center">
-                <div class="slider-info">
-                    <p>Mask</p>
-                    <p>Industrial PPE</p>
-                </div>
-                <div>
-                    <img src="{{asset('/slider3.png')}}" style="width: 100%; height: 300px;" alt="">
-                </div>
-            </div>
-          </div>
-
-{{--
-    <div class="text-center mt-4 showcase p-5">
-        <img src="{{asset('/ixony.png')}}" class="logo">
-        <h3 class="text-white">Welcome to</h3>
-        <h4 class="text-white">Ixony Engineering Limited</h4>
-        <p class="text-white">The biggest importer and authorized distributor of world-renowned safety products in Bangladesh.</p>
-        <button class="bg-danger">Contact Us</button>
-    </div> --}}
-
-{{-- shipping --}}
-    <div class="row shipping">
-        <div class="col-lg-3 p-2">
-            <i class="fa-solid fa-phone-volume"></i>
-            <h3>CALL US ANY TIME</h3>
-            <p>Contact us 24/7 hours a day</p>
-        </div>
-        <div class="col-lg-3 p-2">
-            <i class="fa-solid fa-truck" class="icon"></i>
-            <h3>PICKUP AT ANY STORE</h3>
-            <p>Free shipping on orders over $65</p>
-        </div>
-        <div class="col-lg-3 p-2">
-            <i class="fa-regular fa-credit-card"></i>
-            <h3>SECURED PAYMENT</h3>
-            <p>We accept all major credit cards</p>
-        </div>
-        <div class="col-lg-3 p-2">
-            <i class="fa-solid fa-arrow-rotate-left"></i>
-            <h3>FREE RETURNS</h3>
-            <p>30-days free return policy</p>
-        </div>
-    </div>
-
-
-    {{-- latest product --}}
-    <div class="latest-product">
-        <h3 class="text-center mb-5">Latest Product</h3>
-
-        <button style="position: absolute; right: 50px; top: 20px; border: none;">
-            <i class="fa-solid fa-arrow-right" style="color: white; background-color: #2f415d; padding: 8px;"></i>
-        </button>
-        <div class="row">
-            <div class="col-lg-2">
-                <div class="card product-item">
-                    <img src="https://m.media-amazon.com/images/I/71kyfjacoBL.jpg" class="product-image" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Product Name</h5>
-                      <p class="card-text">Price</p>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-lg-2">
-                <div class="card product-item">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYUucO-ReCtNTt7aEXznnnCfir-bfyH1XIqQ&usqp=CAU" class="product-image" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Product Name</h5>
-                      <p class="card-text">Price</p>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-lg-2">
-                <div class="card product-item">
-                    <img src="https://fujaelelectronics.com/wp-content/uploads/2023/05/Untitled-design-47-1-600x600.jpg" class="product-image" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Product Name</h5>
-                      <p class="card-text">Price</p>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-lg-2">
-                <div class="card product-item">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJdJD8yb4-lkufZlPaXpxRTkIkYN3fqVO8sg&usqp=CAU" class="product-image" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Product Name</h5>
-                      <p class="card-text">Price</p>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-lg-2">
-                <div class="card product-item">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJdJD8yb4-lkufZlPaXpxRTkIkYN3fqVO8sg&usqp=CAU" class="product-image" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Product Name</h5>
-                      <p class="card-text">Price</p>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-lg-2">
-                <div class="card product-item">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJdJD8yb4-lkufZlPaXpxRTkIkYN3fqVO8sg&usqp=CAU" class="product-image" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Product Name</h5>
-                      <p class="card-text">Price</p>
-                    </div>
-                  </div>
-            </div>
-
-
-        </div>
-    </div>
 
     {{-- newsletter --}}
     <div class="newsletter">
@@ -276,6 +142,45 @@
     {{-- end footer --}}
 
 
+    {{-- modal --}}
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="" method="POST">
+                @csrf
+
+                <div class="form-group my-3">
+                    <label>Your Name</label>
+                    <input type="text" name="name" placeholder="Name" class="form-control">
+                </div>
+
+                <div class="form-group my-3">
+                    <label>Your Email</label>
+                    <input type="email" name="email" placeholder="Email" class="form-control">
+                </div>
+
+                <div class="form-group my-3">
+                    <label>Subject</label>
+                    <input type="text" name="subject" placeholder="Subject" class="form-control">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -295,9 +200,31 @@
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 3000,
+            dots: true,
+            arrows: true,
           });
         });
       </script>
+
+
+    <script>
+        $(document).ready(function(){
+          $('.client').slick({
+            // Slick Slider options go here
+            infinite: true,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            dots: true,
+            arrows: true,
+          });
+        });
+      </script>
+
+
+
+
 
 
 </body>
